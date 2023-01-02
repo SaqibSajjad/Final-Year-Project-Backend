@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bppmsModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="app_settings">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="no_of_members" Type="int" />
+  </EntityType>
+  <EntityType Name="fyp_groups">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="description" Type="varchar" MaxLength="255" />
+    <Property Name="created_by" Type="int" />
+    <Property Name="isApproved" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="fyp_groups_requests">
+    <Key>
+      <PropertyRef Name="group_id" />
+      <PropertyRef Name="requested_by" />
+      <PropertyRef Name="requested_to" />
+    </Key>
+    <Property Name="group_id" Type="int" Nullable="false" />
+    <Property Name="requested_by" Type="int" Nullable="false" />
+    <Property Name="requested_to" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="100" />
+    <Property Name="code" Type="varchar" MaxLength="100" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="username" Type="varchar" MaxLength="100" />
+    <Property Name="password" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="phone" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="255" />
+    <Property Name="platform" Type="varchar" MaxLength="100" />
+    <Property Name="cgpa" Type="float" />
+    <Property Name="semester" Type="int" />
+    <Property Name="group_id" Type="int" />
+    <Property Name="role_id" Type="int" />
+  </EntityType>
+  <Association Name="FK__fyp_group__creat__5AEE82B9">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="fyp_groups" Type="Self.fyp_groups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_groups">
+        <PropertyRef Name="created_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__group__49C3F6B7">
+    <End Role="fyp_groups" Type="Self.fyp_groups" Multiplicity="1" />
+    <End Role="fyp_groups_requests" Type="Self.fyp_groups_requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fyp_groups">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_groups_requests">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__reque__4AB81AF0">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="fyp_groups_requests" Type="Self.fyp_groups_requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_groups_requests">
+        <PropertyRef Name="requested_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__reque__4BAC3F29">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="fyp_groups_requests" Type="Self.fyp_groups_requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_groups_requests">
+        <PropertyRef Name="requested_to" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__users__group_id__36B12243">
+    <End Role="fyp_groups" Type="Self.fyp_groups" Multiplicity="0..1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fyp_groups">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__users__role_id__37A5467C">
+    <End Role="roles" Type="Self.roles" Multiplicity="0..1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bppmsModel1StoreContainer">
+    <EntitySet Name="app_settings" EntityType="Self.app_settings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fyp_groups" EntityType="Self.fyp_groups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fyp_groups_requests" EntityType="Self.fyp_groups_requests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="roles" EntityType="Self.roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__fyp_group__creat__5AEE82B9" Association="Self.FK__fyp_group__creat__5AEE82B9">
+      <End Role="users" EntitySet="users" />
+      <End Role="fyp_groups" EntitySet="fyp_groups" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__group__49C3F6B7" Association="Self.FK__fyp_group__group__49C3F6B7">
+      <End Role="fyp_groups" EntitySet="fyp_groups" />
+      <End Role="fyp_groups_requests" EntitySet="fyp_groups_requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__reque__4AB81AF0" Association="Self.FK__fyp_group__reque__4AB81AF0">
+      <End Role="users" EntitySet="users" />
+      <End Role="fyp_groups_requests" EntitySet="fyp_groups_requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__reque__4BAC3F29" Association="Self.FK__fyp_group__reque__4BAC3F29">
+      <End Role="users" EntitySet="users" />
+      <End Role="fyp_groups_requests" EntitySet="fyp_groups_requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__users__group_id__36B12243" Association="Self.FK__users__group_id__36B12243">
+      <End Role="fyp_groups" EntitySet="fyp_groups" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__users__role_id__37A5467C" Association="Self.FK__users__role_id__37A5467C">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

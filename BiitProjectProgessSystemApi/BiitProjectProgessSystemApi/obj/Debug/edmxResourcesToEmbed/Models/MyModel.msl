@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bppmsModelStoreContainer" CdmEntityContainer="Mybpms">
+    <EntitySetMapping Name="app_settings">
+      <EntityTypeMapping TypeName="bppmsModel.app_settings">
+        <MappingFragment StoreEntitySet="app_settings">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="no_of_members" ColumnName="no_of_members" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="assigned_tasks">
+      <EntityTypeMapping TypeName="bppmsModel.assigned_tasks">
+        <MappingFragment StoreEntitySet="assigned_tasks">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="task_id" ColumnName="task_id" />
+          <ScalarProperty Name="assigned_by" ColumnName="assigned_by" />
+          <ScalarProperty Name="assigned_to" ColumnName="assigned_to" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FYP_1_Grading">
+      <EntityTypeMapping TypeName="bppmsModel.FYP_1_Grading">
+        <MappingFragment StoreEntitySet="FYP_1_Grading">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="std_id" ColumnName="std_id" />
+          <ScalarProperty Name="proj_comm_grade" ColumnName="proj_comm_grade" />
+          <ScalarProperty Name="supervisor_grade" ColumnName="supervisor_grade" />
+          <ScalarProperty Name="document_comm_grade" ColumnName="document_comm_grade" />
+          <ScalarProperty Name="final_grade" ColumnName="final_grade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fyp_group_req_supervisor">
+      <EntityTypeMapping TypeName="bppmsModel.fyp_group_req_supervisor">
+        <MappingFragment StoreEntitySet="fyp_group_req_supervisor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="project_id" ColumnName="project_id" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="requested_by" ColumnName="requested_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fyp_groups">
+      <EntityTypeMapping TypeName="bppmsModel.fyp_groups">
+        <MappingFragment StoreEntitySet="fyp_groups">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="isApproved" ColumnName="isApproved" />
+          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="is_fyp_1" ColumnName="is_fyp_1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fyp_groups_requests">
+      <EntityTypeMapping TypeName="bppmsModel.fyp_groups_requests">
+        <MappingFragment StoreEntitySet="fyp_groups_requests">
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="requested_by" ColumnName="requested_by" />
+          <ScalarProperty Name="requested_to" ColumnName="requested_to" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="meetings">
+      <EntityTypeMapping TypeName="bppmsModel.meeting">
+        <MappingFragment StoreEntitySet="meetings">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="meeting_notes" ColumnName="meeting_notes" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="meeting_timing" ColumnName="meeting_timing" />
+          <ScalarProperty Name="isRecurring" ColumnName="isRecurring" />
+          <ScalarProperty Name="is_fyp_1" ColumnName="is_fyp_1" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="messages">
+      <EntityTypeMapping TypeName="bppmsModel.message">
+        <MappingFragment StoreEntitySet="messages">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="msg_from" ColumnName="msg_from" />
+          <ScalarProperty Name="msg_to" ColumnName="msg_to" />
+          <ScalarProperty Name="file_path" ColumnName="file_path" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="project_allocation">
+      <EntityTypeMapping TypeName="bppmsModel.project_allocation">
+        <MappingFragment StoreEntitySet="project_allocation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="project_id" ColumnName="project_id" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="isSpringSemester" ColumnName="isSpringSemester" />
+          <ScalarProperty Name="allocation_year" ColumnName="allocation_year" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="projects">
+      <EntityTypeMapping TypeName="bppmsModel.project">
+        <MappingFragment StoreEntitySet="projects">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="IsAllocated" ColumnName="IsAllocated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="remarks">
+      <EntityTypeMapping TypeName="bppmsModel.remark">
+        <MappingFragment StoreEntitySet="remarks">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="given_by" ColumnName="given_by" />
+          <ScalarProperty Name="given_to" ColumnName="given_to" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="is_public" ColumnName="is_public" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="bppmsModel.role">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="scheduled_meetings">
+      <EntityTypeMapping TypeName="bppmsModel.scheduled_meetings">
+        <MappingFragment StoreEntitySet="scheduled_meetings">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="meeting_id" ColumnName="meeting_id" />
+          <ScalarProperty Name="scheduled_by" ColumnName="scheduled_by" />
+          <ScalarProperty Name="scheduled_for" ColumnName="scheduled_for" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="is_attended" ColumnName="is_attended" />
+          <ScalarProperty Name="meeting_timing" ColumnName="meeting_timing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statuses">
+      <EntityTypeMapping TypeName="bppmsModel.status">
+        <MappingFragment StoreEntitySet="statuses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="grading_allow" ColumnName="grading_allow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tasks">
+      <EntityTypeMapping TypeName="bppmsModel.task">
+        <MappingFragment StoreEntitySet="tasks">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="task_deadline" ColumnName="task_deadline" />
+          <ScalarProperty Name="isFinalTask" ColumnName="isFinalTask" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="is_fyp_1" ColumnName="is_fyp_1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uploaded_meeting_files">
+      <EntityTypeMapping TypeName="bppmsModel.uploaded_meeting_files">
+        <MappingFragment StoreEntitySet="uploaded_meeting_files">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="project_id" ColumnName="project_id" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="meeting_id" ColumnName="meeting_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="file_path" ColumnName="file_path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uploaded_tasks">
+      <EntityTypeMapping TypeName="bppmsModel.uploaded_tasks">
+        <MappingFragment StoreEntitySet="uploaded_tasks">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="task_id" ColumnName="task_id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="file_path" ColumnName="file_path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="bppmsModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="platform" ColumnName="platform" />
+          <ScalarProperty Name="semester" ColumnName="semester" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="cgpa" ColumnName="cgpa" />
+          <ScalarProperty Name="is_allowed_in_meeting" ColumnName="is_allowed_in_meeting" />
+          <ScalarProperty Name="final_grade" ColumnName="final_grade" />
+          <ScalarProperty Name="Pic" ColumnName="Pic" />
+          <ScalarProperty Name="fyp_1_final_grade" ColumnName="fyp_1_final_grade" />
+          <ScalarProperty Name="fyp_2_final_grade" ColumnName="fyp_2_final_grade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

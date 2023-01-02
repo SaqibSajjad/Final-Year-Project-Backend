@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a370a4ec43264b6bbbbfa1f359e81a15" Name="Diagram1">
+        <EntityTypeShape EntityType="bppmsModel.app_settings" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.assigned_tasks" Width="1.5" PointX="8.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.FYP_1_Grading" Width="1.5" PointX="5.25" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.fyp_group_req_supervisor" Width="1.5" PointX="7.5" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.fyp_groups" Width="1.5" PointX="5.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.fyp_groups_requests" Width="3.75" PointX="10.5" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.meeting" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.message" Width="1.5" PointX="5.25" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.project_allocation" Width="1.5" PointX="10.5" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.project" Width="1.5" PointX="6" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.remark" Width="1.5" PointX="10.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.role" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.scheduled_meetings" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.status" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.task" Width="1.5" PointX="9" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.uploaded_meeting_files" Width="1.5" PointX="8.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.uploaded_tasks" Width="1.5" PointX="11.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bppmsModel.user" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <AssociationConnector Association="bppmsModel.FK__assigned___assig__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__assigned___assig__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__assigned___statu__607251E5" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__assigned___task___0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__FYP_1_Gra__std_i__41B8C09B" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__fyp_group__group__725BF7F6" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__fyp_group__proje__73501C2F" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__fyp_group__reque__74444068" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__fyp_group__super__7167D3BD" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__fyp_group__creat__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__fyp_group__group__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__project_a__group__69C6B1F5" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__remarks__group_i__2B0A656D" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__users__group_id__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__fyp_group__reque__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__fyp_group__reque__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__meetings__status__3A4CA8FD" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__scheduled__meeti__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__uploaded___meeti__56B3DD81" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__messages__msg_fr__2EA5EC27" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__messages__msg_to__2F9A1060" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__project_a__proje__67DE6983" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__project_a__super__68D28DBC" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__uploaded___proje__54CB950F" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__remarks__given_b__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__remarks__given_t__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__users__role_id__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__scheduled__sched__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__scheduled__sched__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__scheduled__statu__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__uploaded___task___1D7B6025" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__uploaded___super__55BFB948" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__uploaded___stude__1B9317B3" ManuallyRouted="false" />
+        <AssociationConnector Association="bppmsModel.FK__uploaded___super__1C873BEC" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

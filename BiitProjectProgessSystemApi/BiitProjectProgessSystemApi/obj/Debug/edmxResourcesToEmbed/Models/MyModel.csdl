@@ -1,0 +1,843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bppmsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="app_settings">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="no_of_members" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="assigned_tasks">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="task_id" Type="Int32" Nullable="false" />
+    <Property Name="assigned_by" Type="Int32" Nullable="false" />
+    <Property Name="assigned_to" Type="Int32" Nullable="false" />
+    <Property Name="rating" Type="Int32" />
+    <Property Name="status_id" Type="Int32" />
+    <NavigationProperty Name="user" Relationship="Self.FK__assigned___assig__0E6E26BF" FromRole="assigned_tasks" ToRole="users" />
+    <NavigationProperty Name="user1" Relationship="Self.FK__assigned___assig__0F624AF8" FromRole="assigned_tasks" ToRole="users" />
+    <NavigationProperty Name="status" Relationship="Self.FK__assigned___statu__607251E5" FromRole="assigned_tasks" ToRole="statuses" />
+    <NavigationProperty Name="task" Relationship="Self.FK__assigned___task___0D7A0286" FromRole="assigned_tasks" ToRole="tasks" />
+  </EntityType>
+  <EntityType Name="FYP_1_Grading">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="std_id" Type="Int32" />
+    <Property Name="proj_comm_grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="supervisor_grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="document_comm_grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="final_grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="user" Relationship="Self.FK__FYP_1_Gra__std_i__41B8C09B" FromRole="FYP_1_Grading" ToRole="users" />
+  </EntityType>
+  <EntityType Name="fyp_group_req_supervisor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="group_id" Type="Int32" Nullable="false" />
+    <Property Name="project_id" Type="Int32" Nullable="false" />
+    <Property Name="supervisor_id" Type="Int32" Nullable="false" />
+    <Property Name="requested_by" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="fyp_groups" Relationship="Self.FK__fyp_group__group__725BF7F6" FromRole="fyp_group_req_supervisor" ToRole="fyp_groups" />
+    <NavigationProperty Name="project" Relationship="Self.FK__fyp_group__proje__73501C2F" FromRole="fyp_group_req_supervisor" ToRole="projects" />
+    <NavigationProperty Name="user" Relationship="Self.FK__fyp_group__reque__74444068" FromRole="fyp_group_req_supervisor" ToRole="users" />
+    <NavigationProperty Name="user1" Relationship="Self.FK__fyp_group__super__7167D3BD" FromRole="fyp_group_req_supervisor" ToRole="users" />
+  </EntityType>
+  <EntityType Name="fyp_groups">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="created_by" Type="Int32" />
+    <Property Name="isApproved" Type="Int32" />
+    <Property Name="supervisor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="supervisor_id" Type="Int32" />
+    <Property Name="is_fyp_1" Type="Int32" />
+    <NavigationProperty Name="fyp_group_req_supervisor" Relationship="Self.FK__fyp_group__group__725BF7F6" FromRole="fyp_groups" ToRole="fyp_group_req_supervisor" />
+    <NavigationProperty Name="user" Relationship="Self.FK__fyp_group__creat__5AEE82B9" FromRole="fyp_groups" ToRole="users" />
+    <NavigationProperty Name="fyp_groups_requests" Relationship="Self.FK__fyp_group__group__49C3F6B7" FromRole="fyp_groups" ToRole="fyp_groups_requests" />
+    <NavigationProperty Name="project_allocation" Relationship="Self.FK__project_a__group__69C6B1F5" FromRole="fyp_groups" ToRole="project_allocation" />
+    <NavigationProperty Name="remarks" Relationship="Self.FK__remarks__group_i__2B0A656D" FromRole="fyp_groups" ToRole="remarks" />
+    <NavigationProperty Name="users" Relationship="Self.FK__users__group_id__3A81B327" FromRole="fyp_groups" ToRole="users" />
+  </EntityType>
+  <EntityType Name="fyp_groups_requests">
+    <Key>
+      <PropertyRef Name="group_id" />
+      <PropertyRef Name="requested_by" />
+      <PropertyRef Name="requested_to" />
+    </Key>
+    <Property Name="group_id" Type="Int32" Nullable="false" />
+    <Property Name="requested_by" Type="Int32" Nullable="false" />
+    <Property Name="requested_to" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="fyp_groups" Relationship="Self.FK__fyp_group__group__49C3F6B7" FromRole="fyp_groups_requests" ToRole="fyp_groups" />
+    <NavigationProperty Name="user" Relationship="Self.FK__fyp_group__reque__4AB81AF0" FromRole="fyp_groups_requests" ToRole="users" />
+    <NavigationProperty Name="user1" Relationship="Self.FK__fyp_group__reque__4BAC3F29" FromRole="fyp_groups_requests" ToRole="users" />
+  </EntityType>
+  <EntityType Name="meeting">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meeting_notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="location" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meeting_timing" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="isRecurring" Type="Byte" />
+    <Property Name="is_fyp_1" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <NavigationProperty Name="status1" Relationship="Self.FK__meetings__status__3A4CA8FD" FromRole="meetings" ToRole="statuses" />
+    <NavigationProperty Name="scheduled_meetings" Relationship="Self.FK__scheduled__meeti__160F4887" FromRole="meetings" ToRole="scheduled_meetings" />
+    <NavigationProperty Name="uploaded_meeting_files" Relationship="Self.FK__uploaded___meeti__56B3DD81" FromRole="meetings" ToRole="uploaded_meeting_files" />
+  </EntityType>
+  <EntityType Name="message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="msg_from" Type="Int32" />
+    <Property Name="msg_to" Type="Int32" />
+    <Property Name="file_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="user" Relationship="Self.FK__messages__msg_fr__2EA5EC27" FromRole="messages" ToRole="users" />
+    <NavigationProperty Name="user1" Relationship="Self.FK__messages__msg_to__2F9A1060" FromRole="messages" ToRole="users" />
+  </EntityType>
+  <EntityType Name="project_allocation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="project_id" Type="Int32" Nullable="false" />
+    <Property Name="supervisor_id" Type="Int32" Nullable="false" />
+    <Property Name="group_id" Type="Int32" />
+    <Property Name="isSpringSemester" Type="Byte" />
+    <Property Name="allocation_year" Type="Int32" />
+    <Property Name="isActive" Type="Byte" />
+    <NavigationProperty Name="fyp_groups" Relationship="Self.FK__project_a__group__69C6B1F5" FromRole="project_allocation" ToRole="fyp_groups" />
+    <NavigationProperty Name="project" Relationship="Self.FK__project_a__proje__67DE6983" FromRole="project_allocation" ToRole="projects" />
+    <NavigationProperty Name="user" Relationship="Self.FK__project_a__super__68D28DBC" FromRole="project_allocation" ToRole="users" />
+  </EntityType>
+  <EntityType Name="project">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsAllocated" Type="Int32" />
+    <NavigationProperty Name="fyp_group_req_supervisor" Relationship="Self.FK__fyp_group__proje__73501C2F" FromRole="projects" ToRole="fyp_group_req_supervisor" />
+    <NavigationProperty Name="project_allocation" Relationship="Self.FK__project_a__proje__67DE6983" FromRole="projects" ToRole="project_allocation" />
+    <NavigationProperty Name="uploaded_meeting_files" Relationship="Self.FK__uploaded___proje__54CB950F" FromRole="projects" ToRole="uploaded_meeting_files" />
+  </EntityType>
+  <EntityType Name="remark">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rating" Type="Int32" />
+    <Property Name="given_by" Type="Int32" />
+    <Property Name="given_to" Type="Int32" />
+    <Property Name="group_id" Type="Int32" />
+    <Property Name="is_public" Type="Byte" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="fyp_groups" Relationship="Self.FK__remarks__group_i__2B0A656D" FromRole="remarks" ToRole="fyp_groups" />
+    <NavigationProperty Name="user" Relationship="Self.FK__remarks__given_b__29221CFB" FromRole="remarks" ToRole="users" />
+    <NavigationProperty Name="user1" Relationship="Self.FK__remarks__given_t__2A164134" FromRole="remarks" ToRole="users" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="users" Relationship="Self.FK__users__role_id__3B75D760" FromRole="roles" ToRole="users" />
+  </EntityType>
+  <EntityType Name="scheduled_meetings">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="meeting_id" Type="Int32" Nullable="false" />
+    <Property Name="scheduled_by" Type="Int32" Nullable="false" />
+    <Property Name="scheduled_for" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="is_attended" Type="Byte" />
+    <Property Name="meeting_timing" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="meeting" Relationship="Self.FK__scheduled__meeti__160F4887" FromRole="scheduled_meetings" ToRole="meetings" />
+    <NavigationProperty Name="user" Relationship="Self.FK__scheduled__sched__17036CC0" FromRole="scheduled_meetings" ToRole="users" />
+    <NavigationProperty Name="user1" Relationship="Self.FK__scheduled__sched__17F790F9" FromRole="scheduled_meetings" ToRole="users" />
+    <NavigationProperty Name="status1" Relationship="Self.FK__scheduled__statu__18EBB532" FromRole="scheduled_meetings" ToRole="statuses" />
+  </EntityType>
+  <EntityType Name="status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="color" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="grading_allow" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="assigned_tasks" Relationship="Self.FK__assigned___statu__607251E5" FromRole="statuses" ToRole="assigned_tasks" />
+    <NavigationProperty Name="meetings" Relationship="Self.FK__meetings__status__3A4CA8FD" FromRole="statuses" ToRole="meetings" />
+    <NavigationProperty Name="scheduled_meetings" Relationship="Self.FK__scheduled__statu__18EBB532" FromRole="statuses" ToRole="scheduled_meetings" />
+  </EntityType>
+  <EntityType Name="task">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="task_deadline" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="isFinalTask" Type="Byte" />
+    <Property Name="rating" Type="Int32" />
+    <Property Name="is_fyp_1" Type="Byte" />
+    <NavigationProperty Name="assigned_tasks" Relationship="Self.FK__assigned___task___0D7A0286" FromRole="tasks" ToRole="assigned_tasks" />
+    <NavigationProperty Name="uploaded_tasks" Relationship="Self.FK__uploaded___task___1D7B6025" FromRole="tasks" ToRole="uploaded_tasks" />
+  </EntityType>
+  <EntityType Name="uploaded_meeting_files">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="project_id" Type="Int32" Nullable="false" />
+    <Property Name="supervisor_id" Type="Int32" />
+    <Property Name="meeting_id" Type="Int32" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="file_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="meeting" Relationship="Self.FK__uploaded___meeti__56B3DD81" FromRole="uploaded_meeting_files" ToRole="meetings" />
+    <NavigationProperty Name="project" Relationship="Self.FK__uploaded___proje__54CB950F" FromRole="uploaded_meeting_files" ToRole="projects" />
+    <NavigationProperty Name="user" Relationship="Self.FK__uploaded___super__55BFB948" FromRole="uploaded_meeting_files" ToRole="users" />
+  </EntityType>
+  <EntityType Name="uploaded_tasks">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <Property Name="supervisor_id" Type="Int32" />
+    <Property Name="task_id" Type="Int32" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="file_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="task" Relationship="Self.FK__uploaded___task___1D7B6025" FromRole="uploaded_tasks" ToRole="tasks" />
+    <NavigationProperty Name="user" Relationship="Self.FK__uploaded___stude__1B9317B3" FromRole="uploaded_tasks" ToRole="users" />
+    <NavigationProperty Name="user1" Relationship="Self.FK__uploaded___super__1C873BEC" FromRole="uploaded_tasks" ToRole="users" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="platform" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="semester" Type="Int32" />
+    <Property Name="group_id" Type="Int32" />
+    <Property Name="role_id" Type="Int32" />
+    <Property Name="cgpa" Type="Double" />
+    <Property Name="is_allowed_in_meeting" Type="Int32" />
+    <Property Name="final_grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fyp_1_final_grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fyp_2_final_grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="assigned_tasks" Relationship="Self.FK__assigned___assig__0E6E26BF" FromRole="users" ToRole="assigned_tasks" />
+    <NavigationProperty Name="assigned_tasks1" Relationship="Self.FK__assigned___assig__0F624AF8" FromRole="users" ToRole="assigned_tasks" />
+    <NavigationProperty Name="FYP_1_Grading" Relationship="Self.FK__FYP_1_Gra__std_i__41B8C09B" FromRole="users" ToRole="FYP_1_Grading" />
+    <NavigationProperty Name="fyp_group_req_supervisor" Relationship="Self.FK__fyp_group__reque__74444068" FromRole="users" ToRole="fyp_group_req_supervisor" />
+    <NavigationProperty Name="fyp_group_req_supervisor1" Relationship="Self.FK__fyp_group__super__7167D3BD" FromRole="users" ToRole="fyp_group_req_supervisor" />
+    <NavigationProperty Name="fyp_groups" Relationship="Self.FK__fyp_group__creat__5AEE82B9" FromRole="users" ToRole="fyp_groups" />
+    <NavigationProperty Name="fyp_groups1" Relationship="Self.FK__users__group_id__3A81B327" FromRole="users" ToRole="fyp_groups" />
+    <NavigationProperty Name="fyp_groups_requests" Relationship="Self.FK__fyp_group__reque__4AB81AF0" FromRole="users" ToRole="fyp_groups_requests" />
+    <NavigationProperty Name="fyp_groups_requests1" Relationship="Self.FK__fyp_group__reque__4BAC3F29" FromRole="users" ToRole="fyp_groups_requests" />
+    <NavigationProperty Name="messages" Relationship="Self.FK__messages__msg_fr__2EA5EC27" FromRole="users" ToRole="messages" />
+    <NavigationProperty Name="messages1" Relationship="Self.FK__messages__msg_to__2F9A1060" FromRole="users" ToRole="messages" />
+    <NavigationProperty Name="project_allocation" Relationship="Self.FK__project_a__super__68D28DBC" FromRole="users" ToRole="project_allocation" />
+    <NavigationProperty Name="remarks" Relationship="Self.FK__remarks__given_b__29221CFB" FromRole="users" ToRole="remarks" />
+    <NavigationProperty Name="remarks1" Relationship="Self.FK__remarks__given_t__2A164134" FromRole="users" ToRole="remarks" />
+    <NavigationProperty Name="role" Relationship="Self.FK__users__role_id__3B75D760" FromRole="users" ToRole="roles" />
+    <NavigationProperty Name="scheduled_meetings" Relationship="Self.FK__scheduled__sched__17036CC0" FromRole="users" ToRole="scheduled_meetings" />
+    <NavigationProperty Name="scheduled_meetings1" Relationship="Self.FK__scheduled__sched__17F790F9" FromRole="users" ToRole="scheduled_meetings" />
+    <NavigationProperty Name="uploaded_meeting_files" Relationship="Self.FK__uploaded___super__55BFB948" FromRole="users" ToRole="uploaded_meeting_files" />
+    <NavigationProperty Name="uploaded_tasks" Relationship="Self.FK__uploaded___stude__1B9317B3" FromRole="users" ToRole="uploaded_tasks" />
+    <NavigationProperty Name="uploaded_tasks1" Relationship="Self.FK__uploaded___super__1C873BEC" FromRole="users" ToRole="uploaded_tasks" />
+  </EntityType>
+  <Association Name="FK__assigned___assig__0E6E26BF">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="assigned_tasks" Type="Self.assigned_tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="assigned_tasks">
+        <PropertyRef Name="assigned_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__assigned___assig__0F624AF8">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="assigned_tasks" Type="Self.assigned_tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="assigned_tasks">
+        <PropertyRef Name="assigned_to" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__assigned___statu__607251E5">
+    <End Role="statuses" Type="Self.status" Multiplicity="0..1" />
+    <End Role="assigned_tasks" Type="Self.assigned_tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="statuses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="assigned_tasks">
+        <PropertyRef Name="status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__assigned___task___0D7A0286">
+    <End Role="tasks" Type="Self.task" Multiplicity="1" />
+    <End Role="assigned_tasks" Type="Self.assigned_tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tasks">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="assigned_tasks">
+        <PropertyRef Name="task_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FYP_1_Gra__std_i__41B8C09B">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="FYP_1_Grading" Type="Self.FYP_1_Grading" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="FYP_1_Grading">
+        <PropertyRef Name="std_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__group__725BF7F6">
+    <End Role="fyp_groups" Type="Self.fyp_groups" Multiplicity="1" />
+    <End Role="fyp_group_req_supervisor" Type="Self.fyp_group_req_supervisor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fyp_groups">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_group_req_supervisor">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__proje__73501C2F">
+    <End Role="projects" Type="Self.project" Multiplicity="1" />
+    <End Role="fyp_group_req_supervisor" Type="Self.fyp_group_req_supervisor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_group_req_supervisor">
+        <PropertyRef Name="project_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__reque__74444068">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="fyp_group_req_supervisor" Type="Self.fyp_group_req_supervisor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_group_req_supervisor">
+        <PropertyRef Name="requested_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__super__7167D3BD">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="fyp_group_req_supervisor" Type="Self.fyp_group_req_supervisor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_group_req_supervisor">
+        <PropertyRef Name="supervisor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__creat__5AEE82B9">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="fyp_groups" Type="Self.fyp_groups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_groups">
+        <PropertyRef Name="created_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__group__49C3F6B7">
+    <End Role="fyp_groups" Type="Self.fyp_groups" Multiplicity="1" />
+    <End Role="fyp_groups_requests" Type="Self.fyp_groups_requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fyp_groups">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_groups_requests">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__project_a__group__69C6B1F5">
+    <End Role="fyp_groups" Type="Self.fyp_groups" Multiplicity="0..1" />
+    <End Role="project_allocation" Type="Self.project_allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fyp_groups">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="project_allocation">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__remarks__group_i__2B0A656D">
+    <End Role="fyp_groups" Type="Self.fyp_groups" Multiplicity="0..1" />
+    <End Role="remarks" Type="Self.remark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fyp_groups">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="remarks">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__users__group_id__3A81B327">
+    <End Role="fyp_groups" Type="Self.fyp_groups" Multiplicity="0..1" />
+    <End Role="users" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fyp_groups">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__reque__4AB81AF0">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="fyp_groups_requests" Type="Self.fyp_groups_requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_groups_requests">
+        <PropertyRef Name="requested_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fyp_group__reque__4BAC3F29">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="fyp_groups_requests" Type="Self.fyp_groups_requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="fyp_groups_requests">
+        <PropertyRef Name="requested_to" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__meetings__status__3A4CA8FD">
+    <End Role="statuses" Type="Self.status" Multiplicity="0..1" />
+    <End Role="meetings" Type="Self.meeting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="statuses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="meetings">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__scheduled__meeti__160F4887">
+    <End Role="meetings" Type="Self.meeting" Multiplicity="1" />
+    <End Role="scheduled_meetings" Type="Self.scheduled_meetings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="meetings">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scheduled_meetings">
+        <PropertyRef Name="meeting_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__uploaded___meeti__56B3DD81">
+    <End Role="meetings" Type="Self.meeting" Multiplicity="1" />
+    <End Role="uploaded_meeting_files" Type="Self.uploaded_meeting_files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="meetings">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uploaded_meeting_files">
+        <PropertyRef Name="meeting_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__messages__msg_fr__2EA5EC27">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="messages" Type="Self.message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="messages">
+        <PropertyRef Name="msg_from" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__messages__msg_to__2F9A1060">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="messages" Type="Self.message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="messages">
+        <PropertyRef Name="msg_to" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__project_a__proje__67DE6983">
+    <End Role="projects" Type="Self.project" Multiplicity="1" />
+    <End Role="project_allocation" Type="Self.project_allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="project_allocation">
+        <PropertyRef Name="project_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__project_a__super__68D28DBC">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="project_allocation" Type="Self.project_allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="project_allocation">
+        <PropertyRef Name="supervisor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__uploaded___proje__54CB950F">
+    <End Role="projects" Type="Self.project" Multiplicity="1" />
+    <End Role="uploaded_meeting_files" Type="Self.uploaded_meeting_files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uploaded_meeting_files">
+        <PropertyRef Name="project_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__remarks__given_b__29221CFB">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="remarks" Type="Self.remark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="remarks">
+        <PropertyRef Name="given_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__remarks__given_t__2A164134">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="remarks" Type="Self.remark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="remarks">
+        <PropertyRef Name="given_to" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__users__role_id__3B75D760">
+    <End Role="roles" Type="Self.role" Multiplicity="0..1" />
+    <End Role="users" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__scheduled__sched__17036CC0">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="scheduled_meetings" Type="Self.scheduled_meetings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scheduled_meetings">
+        <PropertyRef Name="scheduled_by" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__scheduled__sched__17F790F9">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="scheduled_meetings" Type="Self.scheduled_meetings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scheduled_meetings">
+        <PropertyRef Name="scheduled_for" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__scheduled__statu__18EBB532">
+    <End Role="statuses" Type="Self.status" Multiplicity="1" />
+    <End Role="scheduled_meetings" Type="Self.scheduled_meetings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="statuses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="scheduled_meetings">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__uploaded___task___1D7B6025">
+    <End Role="tasks" Type="Self.task" Multiplicity="1" />
+    <End Role="uploaded_tasks" Type="Self.uploaded_tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tasks">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uploaded_tasks">
+        <PropertyRef Name="task_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__uploaded___super__55BFB948">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="uploaded_meeting_files" Type="Self.uploaded_meeting_files" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uploaded_meeting_files">
+        <PropertyRef Name="supervisor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__uploaded___stude__1B9317B3">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="uploaded_tasks" Type="Self.uploaded_tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uploaded_tasks">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__uploaded___super__1C873BEC">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="uploaded_tasks" Type="Self.uploaded_tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uploaded_tasks">
+        <PropertyRef Name="supervisor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Mybpms" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="app_settings" EntityType="Self.app_settings" />
+    <EntitySet Name="assigned_tasks" EntityType="Self.assigned_tasks" />
+    <EntitySet Name="FYP_1_Grading" EntityType="Self.FYP_1_Grading" />
+    <EntitySet Name="fyp_group_req_supervisor" EntityType="Self.fyp_group_req_supervisor" />
+    <EntitySet Name="fyp_groups" EntityType="Self.fyp_groups" />
+    <EntitySet Name="fyp_groups_requests" EntityType="Self.fyp_groups_requests" />
+    <EntitySet Name="meetings" EntityType="Self.meeting" />
+    <EntitySet Name="messages" EntityType="Self.message" />
+    <EntitySet Name="project_allocation" EntityType="Self.project_allocation" />
+    <EntitySet Name="projects" EntityType="Self.project" />
+    <EntitySet Name="remarks" EntityType="Self.remark" />
+    <EntitySet Name="roles" EntityType="Self.role" />
+    <EntitySet Name="scheduled_meetings" EntityType="Self.scheduled_meetings" />
+    <EntitySet Name="statuses" EntityType="Self.status" />
+    <EntitySet Name="tasks" EntityType="Self.task" />
+    <EntitySet Name="uploaded_meeting_files" EntityType="Self.uploaded_meeting_files" />
+    <EntitySet Name="uploaded_tasks" EntityType="Self.uploaded_tasks" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="FK__assigned___assig__0E6E26BF" Association="Self.FK__assigned___assig__0E6E26BF">
+      <End Role="users" EntitySet="users" />
+      <End Role="assigned_tasks" EntitySet="assigned_tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__assigned___assig__0F624AF8" Association="Self.FK__assigned___assig__0F624AF8">
+      <End Role="users" EntitySet="users" />
+      <End Role="assigned_tasks" EntitySet="assigned_tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__assigned___statu__607251E5" Association="Self.FK__assigned___statu__607251E5">
+      <End Role="statuses" EntitySet="statuses" />
+      <End Role="assigned_tasks" EntitySet="assigned_tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__assigned___task___0D7A0286" Association="Self.FK__assigned___task___0D7A0286">
+      <End Role="tasks" EntitySet="tasks" />
+      <End Role="assigned_tasks" EntitySet="assigned_tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FYP_1_Gra__std_i__41B8C09B" Association="Self.FK__FYP_1_Gra__std_i__41B8C09B">
+      <End Role="users" EntitySet="users" />
+      <End Role="FYP_1_Grading" EntitySet="FYP_1_Grading" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__group__725BF7F6" Association="Self.FK__fyp_group__group__725BF7F6">
+      <End Role="fyp_groups" EntitySet="fyp_groups" />
+      <End Role="fyp_group_req_supervisor" EntitySet="fyp_group_req_supervisor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__proje__73501C2F" Association="Self.FK__fyp_group__proje__73501C2F">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="fyp_group_req_supervisor" EntitySet="fyp_group_req_supervisor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__reque__74444068" Association="Self.FK__fyp_group__reque__74444068">
+      <End Role="users" EntitySet="users" />
+      <End Role="fyp_group_req_supervisor" EntitySet="fyp_group_req_supervisor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__super__7167D3BD" Association="Self.FK__fyp_group__super__7167D3BD">
+      <End Role="users" EntitySet="users" />
+      <End Role="fyp_group_req_supervisor" EntitySet="fyp_group_req_supervisor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__creat__5AEE82B9" Association="Self.FK__fyp_group__creat__5AEE82B9">
+      <End Role="users" EntitySet="users" />
+      <End Role="fyp_groups" EntitySet="fyp_groups" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__group__49C3F6B7" Association="Self.FK__fyp_group__group__49C3F6B7">
+      <End Role="fyp_groups" EntitySet="fyp_groups" />
+      <End Role="fyp_groups_requests" EntitySet="fyp_groups_requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__project_a__group__69C6B1F5" Association="Self.FK__project_a__group__69C6B1F5">
+      <End Role="fyp_groups" EntitySet="fyp_groups" />
+      <End Role="project_allocation" EntitySet="project_allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__remarks__group_i__2B0A656D" Association="Self.FK__remarks__group_i__2B0A656D">
+      <End Role="fyp_groups" EntitySet="fyp_groups" />
+      <End Role="remarks" EntitySet="remarks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__users__group_id__3A81B327" Association="Self.FK__users__group_id__3A81B327">
+      <End Role="fyp_groups" EntitySet="fyp_groups" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__reque__4AB81AF0" Association="Self.FK__fyp_group__reque__4AB81AF0">
+      <End Role="users" EntitySet="users" />
+      <End Role="fyp_groups_requests" EntitySet="fyp_groups_requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fyp_group__reque__4BAC3F29" Association="Self.FK__fyp_group__reque__4BAC3F29">
+      <End Role="users" EntitySet="users" />
+      <End Role="fyp_groups_requests" EntitySet="fyp_groups_requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__meetings__status__3A4CA8FD" Association="Self.FK__meetings__status__3A4CA8FD">
+      <End Role="statuses" EntitySet="statuses" />
+      <End Role="meetings" EntitySet="meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__scheduled__meeti__160F4887" Association="Self.FK__scheduled__meeti__160F4887">
+      <End Role="meetings" EntitySet="meetings" />
+      <End Role="scheduled_meetings" EntitySet="scheduled_meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__uploaded___meeti__56B3DD81" Association="Self.FK__uploaded___meeti__56B3DD81">
+      <End Role="meetings" EntitySet="meetings" />
+      <End Role="uploaded_meeting_files" EntitySet="uploaded_meeting_files" />
+    </AssociationSet>
+    <AssociationSet Name="FK__messages__msg_fr__2EA5EC27" Association="Self.FK__messages__msg_fr__2EA5EC27">
+      <End Role="users" EntitySet="users" />
+      <End Role="messages" EntitySet="messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__messages__msg_to__2F9A1060" Association="Self.FK__messages__msg_to__2F9A1060">
+      <End Role="users" EntitySet="users" />
+      <End Role="messages" EntitySet="messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__project_a__proje__67DE6983" Association="Self.FK__project_a__proje__67DE6983">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="project_allocation" EntitySet="project_allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__project_a__super__68D28DBC" Association="Self.FK__project_a__super__68D28DBC">
+      <End Role="users" EntitySet="users" />
+      <End Role="project_allocation" EntitySet="project_allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__uploaded___proje__54CB950F" Association="Self.FK__uploaded___proje__54CB950F">
+      <End Role="projects" EntitySet="projects" />
+      <End Role="uploaded_meeting_files" EntitySet="uploaded_meeting_files" />
+    </AssociationSet>
+    <AssociationSet Name="FK__remarks__given_b__29221CFB" Association="Self.FK__remarks__given_b__29221CFB">
+      <End Role="users" EntitySet="users" />
+      <End Role="remarks" EntitySet="remarks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__remarks__given_t__2A164134" Association="Self.FK__remarks__given_t__2A164134">
+      <End Role="users" EntitySet="users" />
+      <End Role="remarks" EntitySet="remarks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__users__role_id__3B75D760" Association="Self.FK__users__role_id__3B75D760">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__scheduled__sched__17036CC0" Association="Self.FK__scheduled__sched__17036CC0">
+      <End Role="users" EntitySet="users" />
+      <End Role="scheduled_meetings" EntitySet="scheduled_meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__scheduled__sched__17F790F9" Association="Self.FK__scheduled__sched__17F790F9">
+      <End Role="users" EntitySet="users" />
+      <End Role="scheduled_meetings" EntitySet="scheduled_meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__scheduled__statu__18EBB532" Association="Self.FK__scheduled__statu__18EBB532">
+      <End Role="statuses" EntitySet="statuses" />
+      <End Role="scheduled_meetings" EntitySet="scheduled_meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__uploaded___task___1D7B6025" Association="Self.FK__uploaded___task___1D7B6025">
+      <End Role="tasks" EntitySet="tasks" />
+      <End Role="uploaded_tasks" EntitySet="uploaded_tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__uploaded___super__55BFB948" Association="Self.FK__uploaded___super__55BFB948">
+      <End Role="users" EntitySet="users" />
+      <End Role="uploaded_meeting_files" EntitySet="uploaded_meeting_files" />
+    </AssociationSet>
+    <AssociationSet Name="FK__uploaded___stude__1B9317B3" Association="Self.FK__uploaded___stude__1B9317B3">
+      <End Role="users" EntitySet="users" />
+      <End Role="uploaded_tasks" EntitySet="uploaded_tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__uploaded___super__1C873BEC" Association="Self.FK__uploaded___super__1C873BEC">
+      <End Role="users" EntitySet="users" />
+      <End Role="uploaded_tasks" EntitySet="uploaded_tasks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

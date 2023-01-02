@@ -1,0 +1,187 @@
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\ApplicationInsights.config
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\csc.exe
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\System.Collections.Immutable.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\System.Reflection.Metadata.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\vbc.exe
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\VBCSCompiler.exe
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\VBCSCompiler.exe.config
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\BiitProjectProgessSystemApi.dll.config
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\BiitProjectProgessSystemApi.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\BiitProjectProgessSystemApi.pdb
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Antlr3.Runtime.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\EntityFramework.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\EntityFramework.SqlServer.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.DependencyCollector.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.Web.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.WindowsServer.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.ApplicationInsights.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Google.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Web.Infrastructure.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Newtonsoft.Json.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Owin.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Net.Http.Formatting.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Helpers.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.Owin.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.WebHost.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Mvc.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Optimization.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Razor.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.Deployment.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.Razor.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\WebGrease.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.DependencyCollector.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.Web.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.WindowsServer.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.ApplicationInsights.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Newtonsoft.Json.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Net.Http.Formatting.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Helpers.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.WebHost.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Mvc.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Optimization.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Razor.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.Deployment.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.Razor.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Antlr3.Runtime.pdb
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\EntityFramework.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\EntityFramework.SqlServer.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Google.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.Owin.xml
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\obj\Debug\BiitProjectProgessSystemApi.dll
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\obj\Debug\BiitProjectProgessSystemApi.pdb
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\obj\Debug\BiitProjectProgessSystemApi.csprojResolveAssemblyReference.cache
+D:\Biit\Final Year Project\api project visual\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\obj\Debug\BiitProjectProgessSystemApi.csproj.ResolveComReference.cache
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\obj\Debug\BiitProjectProgessSystemApi.csproj.ResolveComReference.cache
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\obj\Debug\BiitProjectProgessSystemApi.csproj.CoreCompileInputs.cache
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\obj\Debug\BiitProjectProgessSystemApi.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\obj\Debug\BiitProjectProgessSystemApi.pdb
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\ApplicationInsights.config
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\csc.exe
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\System.Collections.Immutable.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\System.Reflection.Metadata.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\vbc.exe
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\VBCSCompiler.exe
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\roslyn\VBCSCompiler.exe.config
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\BiitProjectProgessSystemApi.dll.config
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\BiitProjectProgessSystemApi.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\BiitProjectProgessSystemApi.pdb
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Antlr3.Runtime.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\EntityFramework.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\EntityFramework.SqlServer.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.DependencyCollector.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.Web.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.WindowsServer.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.ApplicationInsights.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Google.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Web.Infrastructure.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Newtonsoft.Json.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Owin.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Net.Http.Formatting.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Helpers.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.Owin.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.WebHost.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Mvc.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Optimization.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Razor.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.Deployment.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.Razor.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\WebGrease.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.DependencyCollector.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.Web.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AI.WindowsServer.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.ApplicationInsights.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Newtonsoft.Json.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Net.Http.Formatting.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Helpers.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.WebHost.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Mvc.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Optimization.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Razor.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.Deployment.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.WebPages.Razor.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Antlr3.Runtime.pdb
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\EntityFramework.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\EntityFramework.SqlServer.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Google.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.Owin.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\obj\Debug\BiitProjectProgessSystemApi.csproj.CopyComplete
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Cors.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.Cors.dll
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\bin\System.Web.Http.Cors.xml
+D:\Final Year Project Data\final_API_BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\BiitProjectProgessSystemApi\obj\Debug\BiitProjectProgessSystemApi.csproj.AssemblyReference.cache
